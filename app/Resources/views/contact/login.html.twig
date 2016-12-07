@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Collecty index{% endblock %}
+{% block pageTitle %}{{ 'Collectify'|upper }}{% endblock %}
+
+{% block body %}
+    {{ render(controller('FOSUserBundle:Security:login')) }}
+{% endblock %}
+
+

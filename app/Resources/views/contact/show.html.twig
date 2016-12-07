@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Contact</h1>
+    <table class="table table-striped">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ contact.id }}</td>
+            </tr>
+            <tr>
+                <th>Idboundeduser</th>
+                <td>{{ contact.idBoundedUser }}</td>
+            </tr>
+            <tr>
+                <th>Namecontact</th>
+                <td>{{ contact.nameContact }}</td>
+            </tr>
+            <tr>
+                <th>Mailcontact</th>
+                <td>{{ contact.mailContact }}</td>
+            </tr>
+            <tr>
+                <th>Adresscontact</th>
+                <td>{{ contact.adressContact }}</td>
+            </tr>
+            <tr>
+                <th>Sitewebcontact</th>
+                <td>{{ contact.siteWebContact }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<a href="../logout">Logout</a>
+
+    <h1>Contact list</h1>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+
+                <th>Name</th>
+                <th>Mail</th>
+                <th>Adress</th>
+                <th>Web site</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for contact in contacts %}
+            <tr>
+
+                <td>{{ contact.nameContact }}</td>
+                <td>{{ contact.mailContact }}</td>
+                <td>{{ contact.adressContact }}</td>
+                <td>{{ contact.siteWebContact }}</td>
+                <td>
+                    <ul>
+
+                            <a href="{{ path('contact_show', { 'id': contact.id }) }}" class="btn btn-success">show</a>
+
+                            <a href="{{ path('contact_edit', { 'id': contact.id }) }}" class="btn btn-default">edit</a>
+
+                            <a href="{{ path('contact_sup', { 'id': contact.id }) }}" class="btn btn-danger">delete</a>
+
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}
